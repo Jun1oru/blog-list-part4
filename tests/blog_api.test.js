@@ -355,27 +355,6 @@ describe('all tests', () => {
         });
         assert.strictEqual(blogUpdated, true);
       });
-
-      /*test('fail with status code 400 if title is mising', async () => {
-        const blogsAtStart = await helper.blogsInDb();
-        const blogToUpdate = blogsAtStart[0];
-  
-        let { title: _, ...updateBlog } = blogToUpdate;
-        updateBlog = { ...updateBlog, likes: 100 };
-  
-        await api
-          .put(`/api/blogs/${updateBlog.id}`)
-          .send(updateBlog)
-          .expect(400);
-  
-        const blogsAtEnd = await helper.blogsInDb();
-  
-        assert.strictEqual(
-          blogsAtEnd.length,
-          helper.initialBlogs.length
-        );
-        assert.deepStrictEqual(blogsAtStart, blogsAtEnd);
-      });*/
     });
   });
 
